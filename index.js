@@ -41,3 +41,38 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+/* -----------------------------------------
+  Project previews: play on hover (desktop)
+  or when the project is on screen (touch)
+ ---------------------------------------- */
+
+const mediaBoxes = document.querySelectorAll(".media-container");
+const canHover = window.matchMedia("(hover: hover)").matches;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const setPlaying = (box, playing) => {
+  const video = box.querySelector(".hover-video");
+  if (!video || reduceMotion) return;
+  if (playing) {
+    video.play().then(() => box.classList.add("is-playing")).catch(() => {});
+  } else {
+    video.pause();
+    box.classList.remove("is-playing");
+  }
+};
+
+mediaBoxes.forEach((box) => {
+  if (canHover) {
+    box.addEventListener("mouseenter", () => setPlaying(box, true));
+    box.addEventListener("mouseleave", () => setPlaying(box, false));
+  }
+});
+
+if (!canHover && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach((e) => setPlaying(e.target, e.isIntersecting)),
+    { threshold: 0.6 }
+  );
+  mediaBoxes.forEach((box) => observer.observe(box));
+}

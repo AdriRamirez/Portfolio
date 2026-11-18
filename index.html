@@ -1,19 +1,3 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,301 +5,214 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Adrián Ramírez | Game Designer Portfolio
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <title>Adrián Ramírez | Game Designer Portfolio</title>
+  <meta name="description" content="Portfolio of Adrián Ramírez, game designer from Bilbao. Level design, combat and gameplay systems in Unreal Engine and Unity." />
+  <meta name="keywords" content="Adrián Ramírez, game designer, level design, Unreal Engine, Unity, C#, Bilbao" />
+  <meta property="og:title" content="Adrián Ramírez | Game Designer" />
+  <meta property="og:description" content="Level design, combat and gameplay systems. Unreal Engine and Unity." />
+  <meta property="og:image" content="./images/Evubble.png" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
 
-  <!-- ***** Header ***** -->
+  <a href="#work" class="skip-link">Skip to content</a>
 
   <header class="header" role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation">
+      <nav class="nav" role="navigation" aria-label="Main">
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="header__text-box row">
       <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Adrián Ramírez</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>A Game Designer based on Bilbao, Spain</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <h1 class="heading-primary">Adrián Ramírez</h1>
+        <p>Game designer in Bilbao. I build levels, combat and encounters that guide the player.</p>
+        <a href="#work" class="btn btn--pink">See my work</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
       </div>
     </div>
   </header>
 
   <main role="main">
 
-    <!-- ***** Work ***** -->
-
     <section class="work" id="work">
       <div class="row">
         <h2>My Work</h2>
         <div class="work__boxes">
 
-          <!-- Each div with the work__box class is a project. -->
+          <!-- Each .work__box is a project. Hover (desktop) or scroll into view (mobile) plays the preview. -->
 
-          <!--PROJECT 1 -->
-
-          <div class="work__box">
+          <article class="work__box">
             <div class="work__text">
               <h3>Evubble</h3>
-              <p>
-                A game focused on dungeon crawling and bubble-based gameplay mechanics,
-                developed as part of a collaborative game project for a Game Jam.
-              </p>
-              <ul class="work__list">
-                <li>Gameplay Design</li>
-                <li>Battle focused</li>
-                <li>Unity Engine</li>
-                <li>48h Game Jam</li>
-              </ul>
-
+              <p>Dungeon crawler built around bubble-based mechanics, made by a team in a 48-hour game jam.</p>
+              <dl class="work__meta">
+                <div><dt>Role</dt><dd>Gameplay design</dd></div>
+                <div><dt>Engine</dt><dd>Unity</dd></div>
+                <div><dt>Format</dt><dd>48h Game Jam</dd></div>
+              </dl>
+              <!-- Add one line: what was YOUR key design decision here? -->
               <div class="work__links">
-                <a href="https://daltinoko.itch.io/evubble" target="_blank" rel="noopener" class="link__text">
-                  Visit Site 
-                </a>
+                <a href="https://daltinoko.itch.io/evubble" target="_blank" rel="noopener" class="link__text">Play on itch.io <span>&rarr;</span></a>
               </div>
             </div>
-
-            <!-- IMAGEN + VIDEO -->
             <div class="work__image-box media-container">
-                <!-- IMAGEN -->
-              <div class="work__image-box">
-                <img src="./images/Evubble.png" class="work__image" alt="Project 1" />
-
-                  <!-- VIDEO HOVER -->
-                <video autoplay muted loop class="hover-video">
-
-                  <source src="./files/evubble_preview.mp4" type="video/mp4">
-
-                </video>
-              </div>
+              <img src="./images/Evubble.png" class="work__image" alt="Evubble gameplay: a dungeon room with bubble projectiles" loading="lazy" />
+              <video class="hover-video" muted loop playsinline preload="none" aria-hidden="true">
+                <source src="./files/evubble_preview.mp4" type="video/mp4">
+              </video>
             </div>
-          </div>
+          </article>
 
-          <!--PROJECT 2 -->
-
-          <div class="work__box">
-            <!-- TEXTO -->
+          <article class="work__box">
             <div class="work__text">
               <h3>Open World Level</h3>
-              <p>
-                An exploration-focused open world level designed in Unreal Engine, featuring diverse environments, traversal mechanics, 
-                and different heights to create an engaging and immersive experience. 
-                The level includes various gameplay elements such as puzzles, and hidden secrets to encourage player exploration 
-                and interaction.
-              </p>
-
-              <ul class="work__list">
-                <li>Level Design</li>
-                <li>Exploration</li>
-                <li>Platforming</li>
-                <li>Unreal Engine</li>
-              </ul>
-
+              <p>Exploration level with varied environments, traversal mechanics and height changes. Puzzles and hidden secrets reward curious players.</p>
+              <dl class="work__meta">
+                <div><dt>Role</dt><dd>Level design</dd></div>
+                <div><dt>Engine</dt><dd>Unreal Engine</dd></div>
+                <div><dt>Focus</dt><dd>Exploration, platforming</dd></div>
+              </dl>
               <div class="work__links">
-                <!-- DESCARGA -->
-                <a href="#" download class="link__text">
-                  Download Project <span>&rarr;</span>
-                </a>
+                <!-- Replace # with the real link (itch.io, Drive, GitHub release...) -->
+                <a href="#" class="link__text is-soon" aria-disabled="true">Download coming soon</a>
               </div>
             </div>
-
-            <!-- IMAGEN + VIDEO -->
             <div class="work__image-box media-container">
-
-              <!-- IMAGEN -->
-              <div class="work__image-box">
-                <img src="./images/open-world.png" class="work__image" alt="Project 2" />
-              
-              <!-- VIDEO HOVER -->
-              <video autoplay muted loop class="hover-video">
-
+              <img src="./images/open-world.png" class="work__image" alt="Open world level with several heights and environments" loading="lazy" />
+              <video class="hover-video" muted loop playsinline preload="none" aria-hidden="true">
                 <source src="./files/openworld_preview.mp4" type="video/mp4">
-
               </video>
-              </div>
-              </div>
-          </div>
+            </div>
+          </article>
 
-          <!--PROJECT 3 -->
-
-          <div class="work__box">
+          <article class="work__box">
             <div class="work__text">
               <h3>Stealth Game Level</h3>
-              <p>
-                A stealth-focused level designed in Unreal Engine, featuring a variety of enemy types, patrol patterns, 
-                and environmental obstacles to create a challenging and immersive experience. 
-                The level emphasizes strategic planning, timing, and player choice, allowing for multiple approaches to 
-                successfully navigate through the environment.
-              </p>
-               <ul class="work__list">
-                <li>Level Design</li>
-                <li>Stealth</li>
-                <li>Enemy AI</li>
-                <li>Unreal Engine</li>
-              </ul>
-
+              <p>Stealth level with several enemy types, patrol patterns and environmental obstacles. Timing and planning matter, and there is more than one way through.</p>
+              <dl class="work__meta">
+                <div><dt>Role</dt><dd>Level design, enemy AI</dd></div>
+                <div><dt>Engine</dt><dd>Unreal Engine</dd></div>
+                <div><dt>Focus</dt><dd>Stealth, player choice</dd></div>
+              </dl>
               <div class="work__links">
-                <!-- DESCARGA -->
-                <a href="#" download class="link__text">
-                  Download Project <span>&rarr;</span>
-                </a>
+                <a href="#" class="link__text is-soon" aria-disabled="true">Download coming soon</a>
               </div>
             </div>
-
-            <!-- IMAGEN + VIDEO -->
             <div class="work__image-box media-container">
-
-              <!-- IMAGEN -->
-              <div class="work__image-box">
-                <img src="./images/stealth-game.png" class="work__image" alt="Project 3" />
-              
-              <!-- VIDEO HOVER -->
-              <video autoplay muted loop class="hover-video">
-
+              <img src="./images/stealth-game.png" class="work__image" alt="Stealth level with enemy patrol routes" loading="lazy" />
+              <video class="hover-video" muted loop playsinline preload="none" aria-hidden="true">
                 <source src="./files/stealthgame_preview.mp4" type="video/mp4">
-
               </video>
-              </div>
             </div>
-          </div>
+          </article>
 
-
-          <!--PROJECT 4 -->
-
-          <div class="work__box">
+          <article class="work__box">
             <div class="work__text">
               <h3>Metroidvania Level</h3>
-              <p>
-                A metroidvania-style level designed in Unreal Engine, featuring a variety of environments, power-ups, 
-                and mechanics to create a challenging and immersive experience. 
-                The level emphasizes exploration, backtracking, and player progression, allowing for multiple approaches to 
-                successfully navigate through the environment.
-              </p>
-               <ul class="work__list">
-                <li>Level Design</li>
-                <li>Backtracking</li>
-                <li>Power-ups</li>
-                <li>Unreal Engine</li>
-              </ul>
-
+              <p>Metroidvania level with connected environments, power-ups and gated areas. Progression comes from exploring and backtracking with new abilities.</p>
+              <dl class="work__meta">
+                <div><dt>Role</dt><dd>Level design</dd></div>
+                <div><dt>Engine</dt><dd>Unreal Engine</dd></div>
+                <div><dt>Focus</dt><dd>Backtracking, power-ups</dd></div>
+              </dl>
               <div class="work__links">
-                <!-- DESCARGA -->
-                <a href="#" download class="link__text">
-                  Download Project <span>&rarr;</span>
-                </a>
+                <a href="#" class="link__text is-soon" aria-disabled="true">Download coming soon</a>
               </div>
             </div>
-
-            <!-- IMAGEN + VIDEO -->
             <div class="work__image-box media-container">
-
-              <!-- IMAGEN -->
-              <div class="work__image-box">
-                <img src="./images/metroidvania-level.png" class="work__image" alt="Project 4" />
-              
-              <!-- VIDEO HOVER -->
-              <video autoplay muted loop class="hover-video">
-
+              <img src="./images/metroidvania-level.png" class="work__image" alt="Metroidvania level map with gated areas" loading="lazy" />
+              <video class="hover-video" muted loop playsinline preload="none" aria-hidden="true">
                 <source src="./files/metroidvania_preview.mp4" type="video/mp4">
-
               </video>
-              </div>
-              </div>
             </div>
-          </div>
+          </article>
 
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ***** About ***** -->
+    <section class="experience" id="experience">
+      <div class="row">
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <time>Jul 2019 – Feb 2020</time>
+            <h3>Game Designer, PlayStation Talents</h3>
+            <ul>
+              <li>Worked in a team on a game for the PlayStation platform.</li>
+              <li>Designed character behaviors and supported the main story's narrative.</li>
+              <li>Programmed in C# and presented the game at Fun &amp; Serious (BEC).</li>
+            </ul>
+          </li>
+          <li class="timeline__item">
+            <time>Mar – Jun 2019</time>
+            <h3>Mobile Game Developer, Baleuko SL (internship)</h3>
+            <ul>
+              <li>Designed the "kARRAKA" minigame for the "Kimu Zuhaitz Laguna" app.</li>
+              <li>Animated the 2D character and programmed in C#, working with the art team.</li>
+            </ul>
+          </li>
+          <li class="timeline__item">
+            <time>2020 – 2025</time>
+            <h3>Degree in Video Game Design and Development, UPC</h3>
+          </li>
+        </ol>
+        <p class="skills"><strong>Tools:</strong> Unreal Engine, Unity, C#. <strong>Languages:</strong> Spanish (native), English (B2).</p>
+      </div>
+    </section>
 
     <section class="about" id="about">
       <div class="row">
         <h2>About Me</h2>
         <div class="about__content">
           <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Passionate Game Designer focused on creating levels and combat systems that deliver 
-              challenging and immersive experiences. I enjoy designing mechanics, environments 
-              and encounters that guide the player and build memorable gameplay experiences.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="Adrian_CV .pdf" download class="btn">My Resume</a>
+            <p>I design levels and combat systems that are challenging and readable. I like building mechanics, spaces and encounters that guide the player without telling them where to go.</p>
+            <a href="Adrian_CV.pdf" download class="btn">Download my CV</a>
           </div>
-
           <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/adrian-ramirez.png" alt="" />
+            <img class="about__photo" src="./images/adrian-ramirez.png" alt="Portrait of Adrián Ramírez" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ***** Contact ***** -->
-
   <section class="contact" id="contact">
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <p>
-          If you’d like to talk about video games, level design, or potential collaborations, 
-          feel free to get in touch. I’m always open to new projects and opportunities.
-        </p>
-        <!-- Replace the email with yours -->
+        <p>If you'd like to talk about games, level design or working together, write to me. I'm open to new projects and opportunities.</p>
         <a href="mailto:adrianramirezperez1998@gmail.com" class="btn">adrianramirezperez1998@gmail.com</a>
       </div>
     </div>
   </section>
 
-  <!-- ***** Footer ***** -->
-
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://github.com/AdriRamirez/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a href="https://github.com/AdriRamirez/" title="GitHub profile" target="_blank" rel="noopener">
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/adrianramirez98/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/adrianramirez98/" title="LinkedIn profile" target="_blank" rel="noopener">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
           </a>
         </li>
       </ul>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  <a href="#top" class="back-to-top" title="Back to top">
+    <img src="./images/arrow-up.svg" alt="Back to top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
 </body>
